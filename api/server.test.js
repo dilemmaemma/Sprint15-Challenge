@@ -98,7 +98,7 @@ describe('jokes-router.js', () => {
     it('[11] responds with correct message upon failing restriction', async () => {
       const res = await request(server).get('/api/jokes')
 
-      expect(res.body).toEqual('token required')
+      expect(res.body).toEqual({ message: 'token required' })
     })
 
     it('[12] responds with correct status upon failing restriction', async () => {
